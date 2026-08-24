@@ -54,7 +54,7 @@ const Login = () => {
       style={{
         minHeight: "100vh",
         backgroundImage:
-          "linear-gradient(rgba(10,25,47,.75), rgba(10,25,47,.85)), url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1920&q=80')",
+          "linear-gradient(rgba(10,25,47,.75), rgba(10,25,47,.85)), url('https://media.istockphoto.com/id/1385118964/photo/shot-of-a-young-woman-using-a-digital-tablet-while-working-in-an-organic-store.jpg?s=612x612&w=0&k=20&c=mFc1p5N1FBnIRKSb6P106J2X98jXqV_IXH4eLFrsbO0=')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
