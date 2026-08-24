@@ -1,0 +1,255 @@
+.logo-abbr {
+  width: 3rem;
+}
+
+.rowed {
+  display: flex !important;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.col-sm {
+  width: 2%;
+  height: 10px;
+}
+
+.col-sm-2 {
+  width: 1%;
+  height: 10px;
+}
+
+.flexy {
+  display: flex;
+}
+
+/* ==========================
+   PAGINATION
+========================== */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #eeeff0;
+  color: #fff;
+}
+
+/* ==========================
+   LOGIN / AUTH
+========================== */
+
+.auth-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+}
+
+.form-control {
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.btn {
+  border-radius: 12px;
+}
+
+.card {
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero-title {
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================
+   STAFF LOGIN TITLE
+========================== */
+
+.staff-login-title {
+  background: rgba(69, 43, 144, 1) !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 12px !important;
+  text-align: center !important;
+  box-shadow: 0 4px 15px rgba(69, 43, 144, 0.35);
+}
+
+/* ==========================
+   STAFF LOGIN BUTTON
+========================== */
+
+.staff-login-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  border: none !important;
+}
+/* .staff-login-btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+} */
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+  .staff-login-btn {
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .winnersave-logo {
+    width: 65px !important;
+    height: 65px !important;
+  }
+
+  .winnersave-title {
+    font-size: 1.3rem !important;
+  }
+
+  .winnersave-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-text {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .login-dropdown {
+    width: 95vw !important;
+    max-width: 380px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* .staff-login-title {
+    font-size: 1.1rem !important;
+  }
+
+  .staff-login-btn {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    min-width: 120px !important;
+  } */
+
+  .footer-mobile {
+    font-size: 12px !important;
+    padding: 10px !important;
+  }
+
+  .card.position-absolute {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 92vw !important;
+    max-width: 400px !important;
+  }
+
+  /* ==========================
+   SMALL PHONES
+========================== */
+
+  /* .staff-login-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 10px 22px !important;
+} */
+
+  .staff-login-btn:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  .col-6 > div {
+    transition: all 0.3s ease;
+  }
+
+  .col-6 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.35);
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-text {
+    font-size: 0.95rem !important;
+  }
+
+  .winnersave-title {
+    font-size: 1.1rem !important;
+  }
+
+  .winnersave-subtitle {
+    font-size: 0.75rem !important;
+  }
+
+  @media (max-width: 414px) {
+    .deznav {
+      position: fixed;
+      left: -280px;
+      top: 0;
+      width: 280px;
+      height: 100vh;
+      z-index: 9999;
+      transition: 0.3s;
+      overflow-y: auto;
+    }
+
+    .deznav.show {
+      left: 0;
+    }
+
+    
+
+    .content-body {
+      margin-left: 0 !important;
+      width: 100%;
+    }
+  }
+}
