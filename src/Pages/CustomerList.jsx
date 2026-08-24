@@ -19,7 +19,7 @@ const CustomerList = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5200/api/v1/customers", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/customers", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -68,12 +68,15 @@ const CustomerList = () => {
         const token = localStorage.getItem("token");
 
         setDeleting(true);
-        fetch(`http://localhost:5200/api/v1/customers/${customerId}`, {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
+        fetch(
+          `https://winner-3hjl.onrender.com/api/v1/customers/${customerId}`,
+          {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           },
-        })
+        )
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");

@@ -67,7 +67,7 @@ const EditCustomer = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:5200/api/v1/customers/${id}`,
+        `https://winner-3hjl.onrender.com/api/v1/customers/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -99,7 +99,7 @@ const EditCustomer = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch("http://localhost:5200/api/v1/users", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/users", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -124,7 +124,7 @@ const EditCustomer = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch(`http://localhost:5200/api/v1/users/${cookies.userId}`, {
+    fetch(`https://winner-3hjl.onrender.com/api/v1/users/${cookies.userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -147,7 +147,7 @@ const EditCustomer = () => {
     const token = localStorage.getItem("token");
 
     // Fetch customer details
-    fetch(`http://localhost:5200/api/v1/customers/${id}`, {
+    fetch(`https://winner-3hjl.onrender.com/api/v1/customers/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

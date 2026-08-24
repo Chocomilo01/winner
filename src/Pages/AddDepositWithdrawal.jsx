@@ -25,7 +25,7 @@ const AddDepositWithdrawal = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch(`http://localhost:5200/api/v1/customers/${id}`, {
+    fetch(`https://winner-3hjl.onrender.com/api/v1/customers/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -49,7 +49,7 @@ const AddDepositWithdrawal = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch(`http://localhost:5200/api/v1/users/${cookies.userId}`, {
+    fetch(`https://winner-3hjl.onrender.com/api/v1/users/${cookies.userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -128,7 +128,7 @@ const AddDepositWithdrawal = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5200/api/v1${postEndpoint}`,
+        `https://winner-3hjl.onrender.com/api/v1${postEndpoint}`,
         {
           method: "POST",
           headers: {
@@ -191,7 +191,7 @@ const AddDepositWithdrawal = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5200/api/v1/users", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/users", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

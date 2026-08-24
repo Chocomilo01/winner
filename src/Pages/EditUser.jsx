@@ -32,7 +32,7 @@ const EditUser = () => {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:5200/api/v1/users/${id}`,
+          `https://winner-3hjl.onrender.com/api/v1/users/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -115,14 +115,17 @@ const EditUser = () => {
     try {
       setSaving(true);
 
-      const response = await fetch(`http://localhost:5200/api/v1/users/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+      const response = await fetch(
+        `https://winner-3hjl.onrender.com/api/v1/users/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       const data = await response.json();
 

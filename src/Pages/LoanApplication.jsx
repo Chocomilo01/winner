@@ -48,7 +48,7 @@ const LoanApplication = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch(`http://localhost:5200/api/v1/users/${cookies.userId}`, {
+    fetch(`https://winner-3hjl.onrender.com/api/v1/users/${cookies.userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -69,7 +69,7 @@ const LoanApplication = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5200/api/v1/customers", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/customers", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -152,7 +152,7 @@ const LoanApplication = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5200/api/v1/loans/disbursement",
+        "https://winner-3hjl.onrender.com/api/v1/loans/disbursement",
         {
           method: "POST",
           headers: {

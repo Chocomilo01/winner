@@ -10,7 +10,7 @@ const RepaymentDefaulters = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5200/api/v1/loans/defaulters", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/loans/defaulters", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

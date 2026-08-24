@@ -8,7 +8,7 @@ const UsersList = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("http://localhost:5200/api/v1/users", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/users", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -40,7 +40,7 @@ const UsersList = () => {
       setLoading(true);
 
       const response = await fetch(
-        `http://localhost:5200/api/v1/users/${userId}`,
+        `https://winner-3hjl.onrender.com/api/v1/users/${userId}`,
         {
           method: "DELETE",
           headers: {

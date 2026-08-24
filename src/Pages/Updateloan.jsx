@@ -53,7 +53,7 @@ const Updateloan = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5200/api/v1/loans/${id}/update`,
+        `https://winner-3hjl.onrender.com/api/v1/loans/${id}/update`,
         {
           method: "PATCH",
           headers: {
@@ -86,7 +86,7 @@ const Updateloan = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5200/api/v1/users", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/users", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

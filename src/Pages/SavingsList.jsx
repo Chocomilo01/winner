@@ -28,7 +28,7 @@ const SavingsList = () => {
   };
   useEffect(() => {
     setLoading(true); // Show loader when fetching data
-    fetch("http://localhost:5200/api/v1/customers", {
+    fetch("https://winner-3hjl.onrender.com/api/v1/customers", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -75,12 +75,15 @@ const SavingsList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         setDeleting(true);
-        fetch(`http://localhost:5200/api/v1/customers/${customerId}`, {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
+        fetch(
+          `https://winner-3hjl.onrender.com/api/v1/customers/${customerId}`,
+          {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           },
-        })
+        )
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");
@@ -173,7 +176,7 @@ const SavingsList = () => {
             try {
               // Fetch transactions for balance calculation
               const response = await fetch(
-                `http://localhost:5200/api/v1/customers/${customer._id}/transactions`,
+                `https://winner-3hjl.onrender.com/api/v1/customers/${customer._id}/transactions`,
                 { headers: { Authorization: `Bearer ${token}` } },
               );
               const transactions = await response.json();
@@ -256,7 +259,7 @@ const SavingsList = () => {
       // Fetch transactions for each displayed customer
       for (const customer of displayedCustomers) {
         const response = await fetch(
-          `http://localhost:5200/api/v1/customers/${customer._id}/transactions`, // Assuming the endpoint returns transactions
+          `https://winner-3hjl.onrender.com/api/v1/customers/${customer._id}/transactions`, // Assuming the endpoint returns transactions
           {
             headers: {
               Authorization: `Bearer ${token}`,
