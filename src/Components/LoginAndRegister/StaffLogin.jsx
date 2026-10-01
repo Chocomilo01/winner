@@ -53,6 +53,7 @@ const StaffLogin = () => {
           `${data.data.user.firstName} ${data.data.user.lastName}`,
         );
         localStorage.setItem("userId", data.data.user._id);
+        localStorage.setItem("role", data.data.user.roles);
 
         setCookie("userToken", data.data.token, {
           path: "/",

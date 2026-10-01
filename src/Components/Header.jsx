@@ -3,6 +3,7 @@ import React from "react";
 const Header = () => {
   const logout = () => {
     localStorage.removeItem('token')
+    localStorage.removeItem("role");
     window.location.reload()
   }
   return (

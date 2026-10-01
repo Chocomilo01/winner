@@ -198,7 +198,7 @@ const CustomerProfile = () => {
 
     const data = allFiltered.map((transact) => {
       const debit =
-        transact.choose === "Debit"
+        transact.choose === "debit"
           ? transact.amount?.toLocaleString("en-US", {
               minimumFractionDigits: 2,
             })
@@ -406,7 +406,7 @@ const CustomerProfile = () => {
                         </td>
 
                         <td>
-                          {transact.choose === "Debit" ? (
+                          {transact.choose === "debit" ? (
                             <>
                               {transact.amount?.toLocaleString("en-US", {
                                 minimumFractionDigits: 2,
