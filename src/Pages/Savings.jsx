@@ -24,7 +24,7 @@ const Savings = () => {
 
       try {
         const response = await fetch(
-          `https://winner-3hjl.onrender.com/api/v1/transactions/totalDepositByCashByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
+          `https://winnerbe.onrender.com/api/v1/transactions/totalDepositByCashByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ const Savings = () => {
     const token = localStorage.getItem("token");
 
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalDepositByCashByPaymentDate?startDate=2010-01-01&endDate=2050-01-01`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalDepositByCashByPaymentDate?startDate=2010-01-01&endDate=2050-01-01`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -76,7 +76,7 @@ const Savings = () => {
   }, []);
   useEffect(() => {
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalWithdrawalsByTransferByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalWithdrawalsByTransferByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -100,7 +100,7 @@ const Savings = () => {
   }, [startDate, endDate]);
   useEffect(() => {
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalWithdrawalsByCashByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalWithdrawalsByCashByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -130,7 +130,7 @@ const Savings = () => {
     const startDate2 = today.toISOString().split("T")[0];
     const endDate2 = tomorrow.toISOString().split("T")[0];
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalDepositByTransferByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalDepositByTransferByPaymentDate?startDate=${startDate}&endDate=${endDate}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -154,7 +154,7 @@ const Savings = () => {
   }, [startDate, endDate]);
   useEffect(() => {
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalDepositByTransferByPaymentDate?startDate=2010-01-01&endDate=2050-01-01`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalDepositByTransferByPaymentDate?startDate=2010-01-01&endDate=2050-01-01`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -46,7 +46,7 @@ const EditLoan = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch(`https://winner-3hjl.onrender.com/api/v1/loans/${id}`, {
+    fetch(`https://winnerbe.onrender.com/api/v1/loans/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -64,7 +64,7 @@ const EditLoan = () => {
 
         // Now, fetch customer data using the loan.customer value
         return fetch(
-          `https://winner-3hjl.onrender.com/api/v1/customers/${data.data.customer}`,
+          `https://winnerbe.onrender.com/api/v1/customers/${data.data.customer}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -149,7 +149,7 @@ const EditLoan = () => {
 
     try {
       const response = await fetch(
-        `https://winner-3hjl.onrender.com/api/v1/loans/${id}`,
+        `https://winnerbe.onrender.com/api/v1/loans/${id}`,
         {
           method: "PATCH",
           headers: {

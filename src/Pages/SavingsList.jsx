@@ -28,7 +28,7 @@ const SavingsList = () => {
   };
   useEffect(() => {
     setLoading(true); // Show loader when fetching data
-    fetch("https://winner-3hjl.onrender.com/api/v1/customers", {
+    fetch("https://winnerbe.onrender.com/api/v1/customers", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -75,15 +75,12 @@ const SavingsList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         setDeleting(true);
-        fetch(
-          `https://winner-3hjl.onrender.com/api/v1/customers/${customerId}`,
-          {
-            method: "DELETE",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
+        fetch(`https://winnerbe.onrender.com/api/v1/customers/${customerId}`, {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
           },
-        )
+        })
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");
@@ -176,7 +173,7 @@ const SavingsList = () => {
             try {
               // Fetch transactions for balance calculation
               const response = await fetch(
-                `https://winner-3hjl.onrender.com/api/v1/customers/${customer._id}/transactions`,
+                `https://winnerbe.onrender.com/api/v1/customers/${customer._id}/transactions`,
                 { headers: { Authorization: `Bearer ${token}` } },
               );
               const transactions = await response.json();
@@ -259,7 +256,7 @@ const SavingsList = () => {
       // Fetch transactions for each displayed customer
       for (const customer of displayedCustomers) {
         const response = await fetch(
-          `https://winner-3hjl.onrender.com/api/v1/customers/${customer._id}/transactions`, // Assuming the endpoint returns transactions
+          `https://winnerbe.onrender.com/api/v1/customers/${customer._id}/transactions`, // Assuming the endpoint returns transactions
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -386,7 +386,7 @@ const HomeCards = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("https://winner-3hjl.onrender.com/api/v1/customers", {
+    fetch("https://winnerbe.onrender.com/api/v1/customers", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -413,7 +413,7 @@ const HomeCards = () => {
   }, []);
   useEffect(() => {
     fetch(
-      "https://winner-3hjl.onrender.com/api/v1/transactions/withdrawalsByPaymentDate?startDate=2000-10-01&endDate=2099-10-31",
+      "https://winnerbe.onrender.com/api/v1/transactions/withdrawalsByPaymentDate?startDate=2000-10-01&endDate=2099-10-31",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -445,7 +445,7 @@ const HomeCards = () => {
   }
   useEffect(() => {
     fetch(
-      "https://winner-3hjl.onrender.com/api/v1/transactions/totalDepositByCashByPaymentDate?startDate=2023-01-01&endDate=2029-12-31",
+      "https://winnerbe.onrender.com/api/v1/transactions/totalDepositByCashByPaymentDate?startDate=2023-01-01&endDate=2029-12-31",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -469,7 +469,7 @@ const HomeCards = () => {
   }, []);
   useEffect(() => {
     fetch(
-      "https://winner-3hjl.onrender.com/api/v1/transactions/totalDepositByTransferByPaymentDate?startDate=2023-01-01&endDate=2029-12-31",
+      "https://winnerbe.onrender.com/api/v1/transactions/totalDepositByTransferByPaymentDate?startDate=2023-01-01&endDate=2029-12-31",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -493,7 +493,7 @@ const HomeCards = () => {
   }, []);
   useEffect(() => {
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalWithdrawalsByTransferByPaymentDate?startDate=2023-01-01&endDate=2029-12-31`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalWithdrawalsByTransferByPaymentDate?startDate=2023-01-01&endDate=2029-12-31`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -517,7 +517,7 @@ const HomeCards = () => {
   }, []);
   useEffect(() => {
     fetch(
-      `https://winner-3hjl.onrender.com/api/v1/transactions/totalWithdrawalsByCashByPaymentDate?startDate=2023-01-01&endDate=2029-12-31`,
+      `https://winnerbe.onrender.com/api/v1/transactions/totalWithdrawalsByCashByPaymentDate?startDate=2023-01-01&endDate=2029-12-31`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

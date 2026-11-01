@@ -22,7 +22,7 @@ const Loans = () => {
         const [response1, response2, response3] = await Promise.all([
           // First API call
           fetch(
-            `https://winner-3hjl.onrender.com/api/v1/loans/total-deposit-amount-by-cash?startDate=${new Date().toISOString().split("T")[0]}&endDate=${new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().split("T")[0]}`,
+            `https://winnerbe.onrender.com/api/v1/loans/total-deposit-amount-by-cash?startDate=${new Date().toISOString().split("T")[0]}&endDate=${new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().split("T")[0]}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -30,13 +30,13 @@ const Loans = () => {
             },
           ),
           // Second API call
-          fetch(`https://winner-3hjl.onrender.com/api/v1/loans/bank/recieved`, {
+          fetch(`https://winnerbe.onrender.com/api/v1/loans/bank/recieved`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           }),
           // Third API call
-          fetch("https://winner-3hjl.onrender.com/api/v1/loans?limit=all", {
+          fetch("https://winnerbe.onrender.com/api/v1/loans?limit=all", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

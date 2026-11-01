@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "https://winner-3hjl.onrender.com",
+      target: "https://winnerbe.onrender.com",
       changeOrigin: true,
     }),
   );

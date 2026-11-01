@@ -32,7 +32,7 @@ const EditUser = () => {
         setLoading(true);
 
         const response = await fetch(
-          `https://winner-3hjl.onrender.com/api/v1/users/${id}`,
+          `https://winnerbe.onrender.com/api/v1/users/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -116,7 +116,7 @@ const EditUser = () => {
       setSaving(true);
 
       const response = await fetch(
-        `https://winner-3hjl.onrender.com/api/v1/users/${id}`,
+        `https://winnerbe.onrender.com/api/v1/users/${id}`,
         {
           method: "PATCH",
           headers: {

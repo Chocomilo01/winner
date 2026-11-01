@@ -35,7 +35,7 @@ const CustomerProfile = () => {
         setLoading(true);
 
         const response = await fetch(
-          `https://winner-3hjl.onrender.com/api/v1/loans/customer/${id}/loans`,
+          `https://winnerbe.onrender.com/api/v1/loans/customer/${id}/loans`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const CustomerProfile = () => {
             const token = localStorage.getItem("token");
 
             const customerResponse = await fetch(
-              `https://winner-3hjl.onrender.com/api/v1/customers/${customerId}`,
+              `https://winnerbe.onrender.com/api/v1/customers/${customerId}`,
               {
                 headers: {
                   Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ const CustomerProfile = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch(`https://winner-3hjl.onrender.com/api/v1/customers/${id}`, {
+    fetch(`https://winnerbe.onrender.com/api/v1/customers/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -104,14 +104,11 @@ const CustomerProfile = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch(
-      `https://winner-3hjl.onrender.com/api/v1/customers/${id}/transactions`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    fetch(`https://winnerbe.onrender.com/api/v1/customers/${id}/transactions`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    )
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

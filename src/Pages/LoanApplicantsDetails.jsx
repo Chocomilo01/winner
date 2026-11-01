@@ -28,7 +28,7 @@ const LoanApplicantsDetails = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch(`https://winner-3hjl.onrender.com/api/v1/loans/${id}`, {
+    fetch(`https://winnerbe.onrender.com/api/v1/loans/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -43,7 +43,7 @@ const LoanApplicantsDetails = () => {
         setLoanApplicantsDetails(data.data);
 
         return fetch(
-          `https://winner-3hjl.onrender.com/api/v1/customers/${data.data?.customer}`,
+          `https://winnerbe.onrender.com/api/v1/customers/${data.data?.customer}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const LoanApplicantsDetails = () => {
 
     if (customerDetails) {
       fetch(
-        `https://winner-3hjl.onrender.com/api/v1/loans/customer/${loanApplicantsDetails?.customer}/loans`,
+        `https://winnerbe.onrender.com/api/v1/loans/customer/${loanApplicantsDetails?.customer}/loans`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

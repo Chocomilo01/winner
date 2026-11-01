@@ -12,7 +12,7 @@ const TransactionsByTransfer = () => {
 
   useEffect(() => {
     fetch(
-      "https://winner-3hjl.onrender.com/api/v1/transactions/transactions/transfer",
+      "https://winnerbe.onrender.com/api/v1/transactions/transactions/transfer",
       {
         headers: {
           Authorization: `Bearer ${token}`,

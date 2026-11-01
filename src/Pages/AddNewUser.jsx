@@ -57,7 +57,7 @@ const AddNewUser = () => {
 
     try {
       const response = await fetch(
-        "https://winner-3hjl.onrender.com/api/v1/users/register",
+        "https://winnerbe.onrender.com/api/v1/users/register",
         {
           method: "POST",
           headers: {

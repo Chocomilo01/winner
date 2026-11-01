@@ -17,6 +17,7 @@ const AddDepositWithdrawal = () => {
   const [paymentDate, setPaymentDate] = useState("");
   const [description, setDescription] = useState("");
   const [users, setUsers] = useState([]);
+  const [allowOverdraft, setAllowOverdraft] = useState(false);
   const token = localStorage.getItem("token");
 
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const AddDepositWithdrawal = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch(`https://winner-3hjl.onrender.com/api/v1/customers/${id}`, {
+    fetch(`https://winnerbe.onrender.com/api/v1/customers/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -49,7 +50,7 @@ const AddDepositWithdrawal = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch(`https://winner-3hjl.onrender.com/api/v1/users/${cookies.userId}`, {
+    fetch(`https://winnerbe.onrender.com/api/v1/users/${cookies.userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -128,7 +129,7 @@ const AddDepositWithdrawal = () => {
 
     try {
       const response = await fetch(
-        `https://winner-3hjl.onrender.com/api/v1${postEndpoint}`,
+        `https://winnerbe.onrender.com/api/v1${postEndpoint}`,
         {
           method: "POST",
           headers: {
@@ -191,7 +192,7 @@ const AddDepositWithdrawal = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://winner-3hjl.onrender.com/api/v1/users", {
+    fetch("https://winnerbe.onrender.com/api/v1/users", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -235,6 +236,35 @@ const AddDepositWithdrawal = () => {
                       }}
                       class="default-select form-control wide"
                     >
+                      {debitCredit === "debit" && (
+                        <div className="mb-3 col-md-6">
+                          <div className="form-check mt-4">
+                            <input
+                              type="checkbox"
+                              className="form-check-input"
+                              id="allowOverdraft"
+                              checked={allowOverdraft}
+                              onChange={(e) =>
+                                setAllowOverdraft(e.target.checked)
+                              }
+                            />
+
+                            <label
+                              className="form-check-label"
+                              htmlFor="allowOverdraft"
+                            >
+                              Allow Overdraft
+                            </label>
+                          </div>
+
+                          {allowOverdraft && (
+                            <small className="text-warning">
+                              This withdrawal may take the customer's balance
+                              below ₦0.
+                            </small>
+                          )}
+                        </div>
+                      )}
                       <option value="">Select One</option>
                       <option value="credit">Credit</option>
                       <option value="debit">Debit</option>

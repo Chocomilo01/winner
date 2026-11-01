@@ -85,7 +85,7 @@ const AllTransactions = () => {
   useEffect(() => {
     const token = localStorage.getItem("token"); // Replace 'your_token_key' with the actual key you use to store the token
 
-    fetch("https://winner-3hjl.onrender.com/api/v1/transactions/transactions", {
+    fetch("https://winnerbe.onrender.com/api/v1/transactions/transactions", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

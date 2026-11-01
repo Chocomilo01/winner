@@ -38,7 +38,7 @@ const Withdrawals = () => {
       if (end) params.append("endDate", end);
 
       const response = await fetch(
-        `https://winner-3hjl.onrender.com/api/v1/transactions/withdrawals?${params.toString()}`,
+        `https://winnerbe.onrender.com/api/v1/transactions/withdrawals?${params.toString()}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
