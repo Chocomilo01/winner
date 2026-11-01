@@ -222,6 +222,7 @@ const LoanApplicants = () => {
   };
 
   const handleDateChange = (event) => {
+
     setSelectedDate(event.target.value);
 
     const date = new Date(event.target.value);

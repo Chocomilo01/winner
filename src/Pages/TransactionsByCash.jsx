@@ -68,14 +68,16 @@ const TransactionsByCash = () => {
         "Type",
         "Collected By",
         "Updated At",
+
       ],
-      ...formattedData,
+      ...formattedData, 
     ]);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Loan Data");
     XLSX.writeFile(wb, "Winner Savings Transactions Report.xlsx");
   };
 
+  
   return (
     <>
       {loading && <Loader />}
